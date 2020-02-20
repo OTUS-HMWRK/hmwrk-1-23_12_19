@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16...3.16)
+cmake_minimum_required(VERSION 3.12...3.16)
 
 set(
     MY_PROJECT_NAME
@@ -41,7 +41,7 @@ target_link_libraries(HelloWorld_CLI PRIVATE
 )
 
 
-
+message("CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
 if (MSVC)
     target_compile_options(HelloWorld_CLI PRIVATE
         /W4

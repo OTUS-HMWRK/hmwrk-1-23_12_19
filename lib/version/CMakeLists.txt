@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16...3.16)
+cmake_minimum_required(VERSION 3.12...3.16)
 
 project( version_lib
     VERSION 0.0.${TRAVIS_BUILD_NUMBER}
@@ -28,7 +28,7 @@ set_target_properties(
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
-
+message("CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
 target_include_directories(version
     PRIVATE ${PROJECT_SOURCE_DIR}/../../include/version
 )

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16...3.16)
+cmake_minimum_required(VERSION 3.12...3.16)
 
 project( test_version
     VERSION 0.0.${TRAVIS_BUILD_NUMBER}
@@ -49,5 +49,5 @@ else ()
         -Wall -Wextra -pedantic -Werror
     )
 endif()
-
+message("CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
 add_test(test_version test_version)
