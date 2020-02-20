@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.16...3.16)
 
 set(
-    PROJECT_NAME
+    MY_PROJECT_NAME
         HelloWorld_CLI    
 )
 
-project( ${PROJECT_NAME}
+project( ${MY_PROJECT_NAME}
     VERSION 0.0.${TRAVIS_BUILD_NUMBER}
     DESCRIPTION "hmwrk-1-23_12_19"
     HOMEPAGE_URL "https://otus.ru/lessons/razrabotchik-cpp/?int_source=courses_catalog&int_term=programming"
@@ -24,15 +24,15 @@ set(
 )
 
 
-add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})
+add_executable(${MY_PROJECT_NAME} ${HEADERS} ${SOURCES})
 
 set_target_properties(
-    ${PROJECT_NAME} PROPERTIES
+    ${MY_PROJECT_NAME} PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
 
-target_include_directories(${PROJECT_NAME}
+target_include_directories(${MY_PROJECT_NAME}
     PRIVATE ${PROJECT_SOURCE_DIR}/../include/version
 )
 

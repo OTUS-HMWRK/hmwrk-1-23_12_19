@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16...3.16)
 
 set(
-    PROJECT_NAME
+    MY_PROJECT_NAME
         HelloWorld   
 )
 set(
@@ -38,7 +38,7 @@ set(
 
 message("$ENV{VCPKG_PATH}")
 
-project( ${PROJECT_NAME}
+project( ${MY_PROJECT_NAME}
     VERSION 0.0.${TRAVIS_BUILD_NUMBER}
     DESCRIPTION "hmwrk-1-23_12_19"
     HOMEPAGE_URL "https://otus.ru/lessons/razrabotchik-cpp/?int_source=courses_catalog&int_term=programming"
