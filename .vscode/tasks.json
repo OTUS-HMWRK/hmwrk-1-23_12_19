@@ -63,6 +63,24 @@
             "presentation": {
                 "reveal": "always"
             }
+        },
+        {
+            "label": "git_clean",
+            "type": "shell",
+            "command": "git clean -dfx",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "git_clean_test",
+            "type": "shell",
+            "command": "git clean -dfx -n -i",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
         }
     ]
 }
