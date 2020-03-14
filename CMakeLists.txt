@@ -14,17 +14,17 @@ set(
         OTUS-HMWRK
 )
 
-if (NOT DEFINED $ENV{TRAVIS_BUILD_NUMBER})
-    set(
-        TRAVIS_BUILD_NUMBER
-            0
-    )
-else()
+# if (NOT DEFINED $ENV{TRAVIS_BUILD_NUMBER})
+#     set(
+#         TRAVIS_BUILD_NUMBER
+#             0
+#     )
+# else()
     set(
         TRAVIS_BUILD_NUMBER 
             $ENV{TRAVIS_BUILD_NUMBER}
     )
-endif()
+# endif()
 
 set(
     CMAKE_TOOLCHAIN_FILE
