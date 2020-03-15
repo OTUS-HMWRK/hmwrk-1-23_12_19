@@ -30,6 +30,7 @@ set_target_properties(
     ${MY_PROJECT_NAME} PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
+    RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin"
 )
 
 target_include_directories(${MY_PROJECT_NAME}
