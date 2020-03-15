@@ -9,7 +9,7 @@ before_script:
 - sudo mkdir -p /usr/local/lib/gtest
 - sudo ln -s /usr/lib/libgtest.a /usr/local/lib/gtest/libgtest.a
 - sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/gtest/libgtest_main.a
-- sudo cp -a  /usr/includes/gtest /usr/local/includes
+- sudo cp -a  /usr/include/gtest /usr/local/include
 - cd -
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
