@@ -3,7 +3,7 @@ before_script:
 - sudo apt-get install libboost-test-dev libgtest-dev -y
 - sudo apt-get install cmake
 - cd /usr/src/gtest
-- sudo cmake CMakeLists.txt
+- sudo cmake -DBUILD_SHARED_LIBS=ON CMakeLists.txt
 - sudo make
 - sudo cp *.a /usr/lib
 - sudo mkdir -p /usr/local/lib/gtest
