@@ -5,7 +5,7 @@ before_script:
 - cd /usr/src/gtest
 - sudo cmake -DBUILD_SHARED_LIBS=ON CMakeLists.txt
 - sudo make
-- sudo cp -a include/gtest /usr/include
+- sudo cp -a /usr/src/gtest/include/gtest /usr/include
 - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
 
 - cd -
