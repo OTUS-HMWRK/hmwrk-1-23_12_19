@@ -40,8 +40,6 @@ target_link_libraries(HelloWorld_CLI PRIVATE
     version
 )
 
-
-message("CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
 if (MSVC)
     target_compile_options(HelloWorld_CLI PRIVATE
         /W4

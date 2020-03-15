@@ -7,8 +7,6 @@ project( version_lib
     LANGUAGES CXX
 )
 
-#find_package(Boost COMPONENTS unit_test_framework REQUIRED)
-
 option(PROJECT_VERSION_PATCH ON)
 
 configure_file(
@@ -28,7 +26,7 @@ set_target_properties(
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
-message("CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
+
 target_include_directories(version
     PRIVATE ${PROJECT_SOURCE_DIR}/../../include/version
 )

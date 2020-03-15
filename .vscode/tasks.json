@@ -94,6 +94,17 @@
                 "reveal": "always"
             }
         },
+
+        {
+            "label": "run_gtest",
+            "type": "shell",
+            "command": "${workspaceFolder}/bin/exe/Debug/gtest_version.exe",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+
         {
             "label": "git_clean",
             "type": "shell",

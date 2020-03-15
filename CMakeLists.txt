@@ -29,7 +29,6 @@ set(
     Debug
 )
 
-message("$ENV{VCPKG_PATH}")
 
 project( ${MY_PROJECT_NAME}
     VERSION 0.0.${TRAVIS_BUILD_NUMBER}
@@ -45,6 +44,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/lib)
 add_subdirectory(lib/version)
 add_subdirectory(app)
 add_subdirectory(tests/boost)
+add_subdirectory(tests/gtest)
 
 option(PROJECT_VERSION_PATCH ON)
 
@@ -67,4 +67,3 @@ set(CPACK_PACKAGE_CONTACT yudov@hotmail.com)
 include(CPack)
 
 enable_testing()
-message("CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
