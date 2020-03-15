@@ -1,17 +1,15 @@
 language: cpp
-before_install:
- - sudo apt-get -qq update
- - sudo apt-get install -y libgtest-dev cmake
- - sudo wget https://github.com/google/googletest/archive/release-1.7.0.tar.gz
- - sudo tar xf release-1.7.0.tar.gz
- - cd googletest-release-1.7.0
- - sudo cmake -DBUILD_SHARED_LIBS=ON .
- - sudo make
- - sudo cp -a include/gtest /usr/include
- - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
- - cd $TRAVIS_BUILD_DIR
 before_script:
-- sudo apt-get install libboost-test-dev -y
+- sudo apt-get install libboost-test-dev install libgtest-dev -y
+- sudo apt-get install cmake
+- cd /usr/src/gtest
+- sudo cmake CMakeLists.txt
+- sudo make
+- sudo cp *.a /usr/lib
+- sudo mkdir -P /usr/local/lib/gtest
+- sudo ln -s /usr/lib/libgtest.a /usr/local/lib/gtest/libgtest.a
+- sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/gtest/libgtest_main.a
+- cd -
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
 script:
