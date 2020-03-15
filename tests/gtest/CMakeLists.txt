@@ -22,7 +22,6 @@ add_executable(gtest_version ${HEADERS_TEST} gtests.cpp )
 
 set_target_properties(
     gtest_version PROPERTIES
-    COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK 
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
