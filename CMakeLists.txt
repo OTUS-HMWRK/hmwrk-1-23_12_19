@@ -38,6 +38,10 @@ project( ${MY_PROJECT_NAME}
     LANGUAGES CXX
 )
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/exe)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/lib)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/lib)
+
 add_subdirectory(lib/version)
 add_subdirectory(app)
 add_subdirectory(tests/boost)

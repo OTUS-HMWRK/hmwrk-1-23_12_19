@@ -26,7 +26,7 @@
         },
 
         {
-            "label": "build",
+            "label": "build_debug",
             "type": "shell",
             "command": "cmake",
             "args": [
@@ -46,9 +46,29 @@
         },
 
         {
-            "label": "HelloWorld_CLI",
+            "label": "build_release",
             "type": "shell",
-            "command": "${workspaceFolder}/build/app/Debug/HelloWorld_CLI.exe",
+            "command": "cmake",
+            "args": [
+                "--build",
+                ".",
+                "--config",
+                "Release",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": "$go"
+        },        
+
+        {
+            "label": "run_debug",
+            "type": "shell",
+            "command": "${workspaceFolder}/bin/exe/Debug/HelloWorld_CLI.exe",
             "group": "test",
             "presentation": {
                 "reveal": "always"
@@ -56,9 +76,19 @@
         },
 
         {
+            "label": "run_release",
+            "type": "shell",
+            "command": "${workspaceFolder}/bin/exe/Release/HelloWorld_CLI.exe",
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },        
+
+        {
             "label": "run_test",
             "type": "shell",
-            "command": "${workspaceFolder}/build/tests/boost/Debug/test_version.exe",
+            "command": "${workspaceFolder}/bin/exe/Debug/test_version.exe",
             "group": "test",
             "presentation": {
                 "reveal": "always"
@@ -74,7 +104,7 @@
             }
         },
         {
-            "label": "git_clean_test",
+            "label": "git_clean_list",
             "type": "shell",
             "command": "git clean -dfx -n -i",
             "group": "test",
