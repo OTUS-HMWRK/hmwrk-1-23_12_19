@@ -5,9 +5,8 @@ before_script:
 - cd /usr/src/gtest
 - sudo cmake -DBUILD_SHARED_LIBS=ON CMakeLists.txt
 - sudo make
-
-- sudo cp -a libgtest_main.so libgtest.so /usr/lib/
-
+- sudo ln -s /usr/src/gtest/libgtest_main.so /usr/lib/libgtest_main.so
+- sudo ln -s /usr/src/gtest/libgtest.so.so /usr/lib/libgtest.so
 - cd -
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
