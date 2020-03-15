@@ -52,13 +52,17 @@ configure_file(
     ${PROJECT_SOURCE_DIR}/conf/git_create_repo.txt.in 
     ${PROJECT_SOURCE_DIR}/conf/git_create_repo.txt)
 
+configure_file(
+    ${PROJECT_SOURCE_DIR}/conf/.travis.yml.in 
+    ${PROJECT_SOURCE_DIR}/.travis.yml)
+
 set(CPACK_GENERATOR DEB)
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
 set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
 set(CPACK_PACKAGE_VERSION_PATCH ${TRAVIS_BUILD_NUMBER})
 
-set(CPACK_PACKAGE_CONTACT example@example.com)
+set(CPACK_PACKAGE_CONTACT yudov@hotmail.com)
 
 include(CPack)
 
