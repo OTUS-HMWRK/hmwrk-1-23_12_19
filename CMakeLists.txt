@@ -27,10 +27,6 @@ set(
     )
 endif()
 
-    set(
-        TRAVIS_BUILD_NUMBER 
-            "$ENV{TRAVIS_BUILD_NUMBER}"
-    )
 endif()
 
 set(
