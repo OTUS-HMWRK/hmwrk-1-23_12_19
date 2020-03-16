@@ -108,7 +108,7 @@
         {
             "label": "git_clean",
             "type": "shell",
-            "command": "git clean -dfx -e PreLoad.cmake",
+            "command": "git clean -dfx -n",
             "group": "test",
             "presentation": {
                 "reveal": "always"
