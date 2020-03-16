@@ -14,10 +14,18 @@ set(
         OTUS-HMWRK
 )
 
-    set(
+
+if("" STREQUAL "$ENV{TRAVIS_BUILD_NUMBER}")
+set(
         TRAVIS_BUILD_NUMBER 
-            $ENV{TRAVIS_BUILD_NUMBER}
+            0
     )
+else()
+set(
+        TRAVIS_BUILD_NUMBER 
+            "$ENV{TRAVIS_BUILD_NUMBER}"
+    )
+endif()
 
 set(
     CMAKE_TOOLCHAIN_FILE
@@ -31,7 +39,7 @@ set(
 
 
 project( ${MY_PROJECT_NAME}
-    VERSION 0.0.${TRAVIS_BUILD_NUMBER}
+    VERSION 0.0.666#${TRAVIS_BUILD_NUMBER}
     DESCRIPTION "hmwrk-1-23_12_19"
     HOMEPAGE_URL "https://otus.ru/lessons/razrabotchik-cpp/?int_source=courses_catalog&int_term=programming"
     LANGUAGES CXX

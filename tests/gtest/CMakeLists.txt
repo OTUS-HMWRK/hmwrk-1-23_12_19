@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12...3.16)
 
 project( gtest_version
-    VERSION 0.0.${TRAVIS_BUILD_NUMBER}
+    VERSION 0.0.666#${TRAVIS_BUILD_NUMBER}
     DESCRIPTION "hmwrk-1-23_12_19"
     HOMEPAGE_URL "https://otus.ru/lessons/razrabotchik-cpp/?int_source=courses_catalog&int_term=programming"
     LANGUAGES CXX
@@ -33,12 +33,25 @@ target_include_directories(
     ${GTEST_INCLUDE_DIR}
 )
 
+
+if (UNIX)
+target_link_libraries(
+    gtest_version 
+    PRIVATE
+    ${GTEST_BOTH_LIBRARIES}
+    pthread
+    version
+)    
+endif (UNIX)
+
+if (MSVC)
 target_link_libraries(
     gtest_version 
     PRIVATE
     ${GTEST_BOTH_LIBRARIES}
     version
 )
+endif (MSVC)
 
 if (MSVC)
     target_compile_options(gtest_version PRIVATE
