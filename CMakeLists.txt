@@ -27,8 +27,6 @@ set(
     )
 endif()
 
-endif()
-
 set(
     CMAKE_TOOLCHAIN_FILE
     $ENV{VCPKG_PATH}
